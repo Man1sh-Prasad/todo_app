@@ -1,0 +1,20 @@
+.footer {
+    color: var(--primary-text-color);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.social-media-links i{
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.last-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-section p {
+    padding: 2rem;
+}

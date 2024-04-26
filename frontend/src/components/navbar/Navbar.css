@@ -1,0 +1,119 @@
+
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #fffae5;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+}  
+
+.nav-links-container {
+    padding-right: 5rem;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 1.5rem;
+    position: relative; 
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    transition: font-size 0.2s ;
+}
+
+.navbar li a:hover {
+    color:#023047;
+    font-size: 0.9rem;
+    text-decoration: underline;
+} 
+
+.logo {
+    margin-top: -0.8rem;
+    height: .8rem;
+    width: 6rem;
+    padding-left: 4rem;
+}
+
+.signup-btn {
+    background-color: #001d3d;
+    color: white ;
+    font-size: 0.8rem ;
+    font-weight: 600 ;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.4rem;
+    transition: background-color, font-size, box-shadow 0.2s;
+}
+
+.signup-btn:hover {
+    background-color: #023047;
+    color: white;
+    font-size: .7rem;
+    text-decoration: none ;
+    padding: 0.4rem 1.2rem;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile i {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    
+
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 3.7rem;
+        right: 0px;
+        width: 15rem;
+        height: 100vh;
+        background: #fffae5;
+        border-radius: .4rem;
+        box-shadow: 0 3rem 4rem  rgba(0, 0, 0, 0.2);
+        padding-right: 2rem;
+    }
+
+    .nav-links-container.show {
+        display: flex;
+    }
+    
+    .nav-links-container li {
+        margin: 1rem 0;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .logo {
+        margin-top: -0.8rem;
+        height: .8rem;
+        width: 6rem;
+        padding-left: 2rem;
+    }
+}
+
