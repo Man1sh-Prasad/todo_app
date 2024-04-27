@@ -3,14 +3,27 @@ import { Navbar } from './components/navbar/Navbar.jsx'
 import { RecoilRoot } from 'recoil'
 import { Home } from './components/homepage/Home.jsx'
 import { Footer } from './components/footer/Footer.jsx'
+import { About } from './routes/about/About.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Signup } from './routes/signup/Signup.jsx'
+import { Login } from './routes/login/Login.jsx'
 
 function App() {
   return (
     <div>
-      <RecoilRoot>
-        <Navbar />
-      </RecoilRoot>
-      <Home />
+      <Router>
+        <RecoilRoot>
+          <Navbar />
+        </RecoilRoot>
+
+        <Routes>
+          <Route  exact path='/' element={<Home />} />
+          <Route  path='/about' element={<About />} />
+          <Route  path='/signup' element={<Signup />} />
+          <Route  path='/login' element={<Login />} />
+        </Routes>
+      </Router>
+      
       <Footer />
     </div>
   )

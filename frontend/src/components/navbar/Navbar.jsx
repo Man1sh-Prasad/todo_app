@@ -3,6 +3,7 @@ import "./Navbar.css"
 import logo from "../../assets/todos-logo-dark.png"
 import { useRecoilState } from "recoil"
 import { clickedStateAtom } from "../../atoms/atoms"
+import { Link } from 'react-router-dom'
 
 export function Navbar() {
   const [clicked, setClicked] = useRecoilState(clickedStateAtom);
@@ -15,19 +16,19 @@ export function Navbar() {
       <>
         <div className="navbar">
           <div className="h-flex">
-           <a href="">
+           <Link to="/">
            <img className="logo" src={logo} alt="Logo" />
-           </a>
+           </Link>
           </div>
 
           <div>
           <ul className={`h-flex nav-links-container ${clicked ? "show" : ""}`}>
-               <li><a href="">Home</a></li>
-               <li><a href="">About Us</a></li>
-               <li><a href="">Login</a></li>
-               <li><a href="">
-                      <button className="signup-btn">Sign Up</button>
-                   </a>
+               <li><Link to="/">Home</Link></li>
+               <li><Link to="/about">About Us</Link></li>
+               <li><Link to="/login">Login</Link></li>
+               <li><Link to="/signup">
+                      <button className="signup-button">Sign Up</button>
+                   </Link>
                 </li>
             </ul>
           </div>
