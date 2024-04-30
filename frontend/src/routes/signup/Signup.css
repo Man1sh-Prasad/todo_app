@@ -30,6 +30,11 @@
     margin-top: 1rem;
    padding: 0.8rem 2rem;
    font-size: 0.9rem;
+   background-color: #001d3d;
+    color: white ;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 1rem;
 }
 
 .signup-btn:hover {
@@ -37,3 +42,12 @@
    padding: 0.7rem 1.8rem;
    font-size: 0.8rem;
 }
+
+.signup-container span a{
+    color: var(--accent-color);
+}
+
+.signup-container span a:hover{
+    font-size: 0.9rem;
+}
+

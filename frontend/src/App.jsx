@@ -7,6 +7,8 @@ import { About } from './routes/about/About.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Signup } from './routes/signup/Signup.jsx'
 import { Login } from './routes/login/Login.jsx'
+import { Todos } from './routes/todos/Todos.jsx'
+
 
 function App() {
   return (
@@ -14,17 +16,20 @@ function App() {
       <Router>
         <RecoilRoot>
           <Navbar />
-        </RecoilRoot>
-
+        
+          
         <Routes>
           <Route  exact path='/' element={<Home />} />
+          <Route  path='/addTodo' element={<Todos />} />
           <Route  path='/about' element={<About />} />
           <Route  path='/signup' element={<Signup />} />
           <Route  path='/login' element={<Login />} />
         </Routes>
+        </RecoilRoot>
       </Router>
       
       <Footer />
+     
     </div>
   )
 }

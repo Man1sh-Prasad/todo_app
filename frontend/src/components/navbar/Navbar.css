@@ -1,17 +1,10 @@
-
-
-
-
-
-
-
 .navbar {
     display: flex;
     height: 3.5rem;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    background-color: #fef6e8;
+    background-color: #fffae5;
     border-radius: 0.4rem;
     margin-bottom: 0.5rem;
 }  
@@ -95,6 +88,7 @@
         border-radius: .4rem;
         box-shadow: 0 3rem 4rem  rgba(0, 0, 0, 0.2);
         padding-right: 2rem;
+        z-index: 1;
     }
 
     .nav-links-container.show {

@@ -24,6 +24,7 @@ export function Navbar() {
           <div>
           <ul className={`h-flex nav-links-container ${clicked ? "show" : ""}`}>
                <li><Link to="/">Home</Link></li>
+               <li><Link to="/addTodo">Add Todo</Link></li>
                <li><Link to="/about">About Us</Link></li>
                <li><Link to="/login">Login</Link></li>
                <li><Link to="/signup">

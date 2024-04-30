@@ -1,0 +1,33 @@
+.todoCard {
+    padding: 1rem;
+    position: relative;
+    border: 1px solid var(--secondary-text-color);
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px  rgba(0, 0, 0, 0.2);
+}
+
+.todo-content {
+    height: 90%;
+}
+
+.todo-card-description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.option-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-container i{
+    padding: 0.5rem;
+    color: var(--accent-color)
+}
+
+.option-container i:hover{
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-text-color);
+}

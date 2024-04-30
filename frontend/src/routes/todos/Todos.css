@@ -1,0 +1,58 @@
+.todo {
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    margin-bottom: 2rem;
+}
+
+.todo-input-container {
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    width: 21rem
+}
+
+.todo-input-container input, 
+.todo-input-container textarea{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    width: 20rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.todo-card-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+    padding: 1rem 2rem;
+}
+
+.todo-card {
+    min-height: 7rem;
+    max-height: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .todo-card-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .todo-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .todo-card-container {
+        grid-template-columns: 1fr ;
+    }
+}
