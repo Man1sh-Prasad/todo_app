@@ -1,7 +1,7 @@
 import './TodoCard.css'
 import '../../../src/index.css'
 
-export function TodoCard({title, description}) {
+export function TodoCard({title, description, id, deleteTodo, toggleUpdate}) {
     return (
         <div className="todoCard">
             <div className='todo-content'>
@@ -13,10 +13,12 @@ export function TodoCard({title, description}) {
         
             <div className="option-container">
             <div>
-                    <i className="fa-solid fa-pen-to-square"></i>
+                    <i className="fa-solid fa-pen-to-square" onClick={toggleUpdate}></i>
                 </div>
                 <div>
-                <i className="fa-solid fa-trash"></i>
+                <i className="fa-solid fa-trash" onClick={() => {
+                    deleteTodo(id)
+                }}></i>
                 </div>
             </div>
         </div>

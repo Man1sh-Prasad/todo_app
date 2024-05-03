@@ -20,3 +20,8 @@ export const todoListAtom = atom({
     key: 'todoListAtom',
     default: [{}],
 })
+
+export const updateStateAtom = atom({
+    key: 'updateStateAtom',
+    default: false,
+})

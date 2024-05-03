@@ -22,12 +22,12 @@
 }
 
 .option-container i{
-    padding: 0.5rem;
-    color: var(--accent-color)
+   
+    color: var(--secondary-text-color);
 }
 
 .option-container i:hover{
     border-radius: 50%;
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
-    color: var(--secondary-text-color);
+    color: var(--accent-color)
 }

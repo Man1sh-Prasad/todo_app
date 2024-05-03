@@ -3,6 +3,7 @@
     min-height: 100vh;
     max-height: auto;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .todo-input-container {
@@ -14,7 +15,7 @@
 }
 
 .todo-input-container input, 
-.todo-input-container textarea{
+.todo-input-container textarea {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     width: 20rem;
     font-size: 1rem;
@@ -55,4 +56,60 @@
     .todo-card-container {
         grid-template-columns: 1fr ;
     }
+}
+
+
+.todo-update-container {
+    position: absolute;
+    position: fixed;
+    top: 15rem;
+    left: 2rem;
+    right: 2rem;
+    border: 1px solid orange;
+    background-color: aliceblue;
+    height: 50vh;
+    border-radius: 0.5rem;
+}
+
+.update-container h3 {
+    margin: 1rem 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.update-container input,
+.update-container textarea {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    width: 80%;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.update-btn-container {
+    margin: 1rem 0;
+}
+
+.update-btn-container button{
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.update-btn-container button:hover {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+}
+
+.update-btn {
+    background-color: #001d3d;
+}
+
+.update-close-btn {
+    border: 2px solid #001d3d;
+    background-color: #fff;
+    color: #001d3d;
+    font-weight: 600;
 }
