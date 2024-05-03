@@ -23,11 +23,11 @@ export function Navbar() {
 
           <div>
           <ul className={`h-flex nav-links-container ${clicked ? "show" : ""}`}>
-               <li><Link to="/">Home</Link></li>
-               <li><Link to="/addTodo">Add Todo</Link></li>
-               <li><Link to="/about">About Us</Link></li>
-               <li><Link to="/login">Login</Link></li>
-               <li><Link to="/signup">
+               <li><Link to="/" onClick={handleClick}>Home</Link></li>
+               <li><Link to="/addTodo" onClick={handleClick}>Add Todo</Link></li>
+               <li><Link to="/about" onClick={handleClick}>About Us</Link></li>
+               <li><Link to="/login" onClick={handleClick}>Login</Link></li>
+               <li><Link to="/signup" onClick={handleClick}>
                       <button className="signup-button">Sign Up</button>
                    </Link>
                 </li>
