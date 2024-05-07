@@ -5,11 +5,15 @@ import { emailAtom, passwordAtom } from "../../atoms/atoms";
 import { useRecoilState } from 'recoil'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authActions } from "../../store/store.js";
 
 export function Login () {
     const [email, setEmail] = useRecoilState(emailAtom)
     const [password, setPassword] = useRecoilState(passwordAtom)
     const navigate = useNavigate()
+
+    const dispatch = useDispatch();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -18,13 +22,18 @@ export function Login () {
         })
         .then(function(response) {
             if(response.data._id) {
+                console.log(response);
+                console.log(response.data._id)
                 setEmail('');
                 setPassword('');
                 navigate('/addTodo')
+                sessionStorage.setItem("id", response.data._id)
+                dispatch(authActions.login())
             }
         })
         .catch(function(error) {
-            alert(error.response.data.msg)
+            alert("invalid credentials")
+            console.log(error)
         })
     }
 

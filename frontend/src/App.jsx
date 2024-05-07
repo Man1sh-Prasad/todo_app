@@ -8,23 +8,33 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Signup } from './routes/signup/Signup.jsx'
 import { Login } from './routes/login/Login.jsx'
 import { Todos } from './routes/todos/Todos.jsx'
-
+import { useEffect } from 'react'
+import { authActions } from './store/store.js'
+import { useDispatch } from 'react-redux'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const id = sessionStorage.getItem("id");
+    // if id is available in session Storage stay logged in
+    if(id) {
+    dispatch(authActions.login());
+    }
+  }, [])
+
   return (
     <div>
       <Router>
         <RecoilRoot>
           <Navbar />
-        
-          
-        <Routes>
-          <Route  exact path='/' element={<Home />} />
-          <Route  path='/addTodo' element={<Todos />} />
-          <Route  path='/about' element={<About />} />
-          <Route  path='/signup' element={<Signup />} />
-          <Route  path='/login' element={<Login />} />
-        </Routes>
+          <Routes>
+            <Route  exact path='/' element={<Home />} />
+            <Route  path='/addTodo' element={<Todos />} />
+            <Route  path='/about' element={<About />} />
+            <Route  path='/signup' element={<Signup />} />
+            <Route  path='/login' element={<Login />} />
+          </Routes>
         </RecoilRoot>
       </Router>
       
