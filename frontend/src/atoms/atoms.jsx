@@ -25,3 +25,18 @@ export const updateStateAtom = atom({
     key: 'updateStateAtom',
     default: false,
 })
+
+export const emailAtom = atom({
+    key: 'emailAtom',
+    default: ""
+})
+
+export const usernameAtom = atom({
+    key: 'usernameAtom',
+    default: ""
+})
+
+export const passwordAtom = atom({
+    key: 'passwordAtom',
+    default: ""
+})
