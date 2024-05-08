@@ -22,8 +22,8 @@ export function Login () {
         })
         .then(function(response) {
             if(response.data._id) {
-                console.log(response);
-                console.log(response.data._id)
+                // console.log(response);
+                // console.log(response.data._id)
                 setEmail('');
                 setPassword('');
                 navigate('/addTodo')

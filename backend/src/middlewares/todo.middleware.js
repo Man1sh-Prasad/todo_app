@@ -17,7 +17,7 @@ export async function todoMiddleware(req, res, next) {
         if (!existingTodo) {
             return res.status(404).json({ error: "Todo not found" });
         }
-
+        console.log('todo middleware passed')
         // If todo exists, proceed to the next middleware or route handler
         next();
     } catch (error) {

@@ -18,7 +18,7 @@ export const todoDescriptionAtom = atom({
 
 export const todoListAtom = atom({
     key: 'todoListAtom',
-    default: [{}],
+    default: [],
 })
 
 export const updateStateAtom = atom({
@@ -39,4 +39,9 @@ export const usernameAtom = atom({
 export const passwordAtom = atom({
     key: 'passwordAtom',
     default: ""
+})
+
+export const refreshTodoAtom = atom({
+    key: 'refreshTodoAtom',
+    default: false,
 })

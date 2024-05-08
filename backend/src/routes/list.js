@@ -42,19 +42,17 @@ router.put('/updateTodo/:id',userMiddleware, todoMiddleware, async (req, res) =>
 })
 
 // delete 
-router.delete('/deleteTodo/:id', userMiddleware, todoMiddleware,async (req, res) => {
+router.delete('/deleteTodo/:id', userMiddleware, todoMiddleware, async (req, res) => {
     
     try {
-        const todoId = req.params.id;
-        
-        const todoToBeDeleted = await Todos.findByIdAndDelete(todoId);
-
+        const todoToBeDeleted = await Todos.findByIdAndDelete(req.params.id);
+       
         if(!todoToBeDeleted) {
             return res.status(404).json({msg: "Todo not found"})
         }
 
-        const email = req.body.email;
-        await User.findOneAndUpdate({email}, { $pull: {todoList: todoId}})
+        const userId = req.body.id;
+        await User.findByIdAndUpdate(userId, {$pull: {todoList: req.params.id}})
         
         return res.status(200).json({msg: "Todo deleted successfully"})
     
