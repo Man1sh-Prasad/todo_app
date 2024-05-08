@@ -2,7 +2,7 @@ import { User } from "../models/user.model.js"
 
 export async function userMiddleware(req, res, next) {
    try {
-        const email = req.body.id;
+        const id = req.body.id;
         const existingUser = await User.findById(id);
         if(existingUser) {
             next();
