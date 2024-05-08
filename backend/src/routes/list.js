@@ -9,8 +9,8 @@ const router = Router();
 // create
 router.post('/addTodo', userMiddleware, async (req, res) => {
     try {
-        const {title, description, email} = req.body;
-        const existingUser = await User.findOne({ email })
+        const {title, description, id} = req.body;
+        const existingUser = await User.findById(id)
 
         const list = new Todos({title, description, user: existingUser})
         await list.save()
